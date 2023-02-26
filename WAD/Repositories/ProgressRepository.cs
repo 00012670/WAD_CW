@@ -14,9 +14,14 @@ namespace WAD.Repositories
             _dbContext = dbContext;
         }
 
+        private Progress FindHabitById(int progressId)
+        {
+            return _dbContext.Progresses.Find(progressId);
+        }
+
         public void DeleteProgress(int progressId)
         {
-            var progress = _dbContext.Progresses.Find(progressId);
+            var progress = FindHabitById(progressId);
             _dbContext.Progresses.Remove(progress);
             Save();
         }
@@ -33,7 +38,7 @@ namespace WAD.Repositories
 
         public Progress GetProgressById(int Id)
         {
-            var progress = _dbContext.Progresses.Find(Id);
+            var progress = FindHabitById(Id);
             return progress;
         }
 

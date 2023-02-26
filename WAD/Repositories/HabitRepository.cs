@@ -13,10 +13,15 @@ namespace WAD.Repositories
             _dbContext = dbContext;
         }
 
-  
+        private Habit FindHabitById(int habitId)
+        {
+            return _dbContext.Habits.Find(habitId);
+        }
+
+
         public void DeleteHabit(int habitId)
         {
-            var habit = _dbContext.Habits.Find(habitId);
+            var habit = FindHabitById(habitId);
             _dbContext.Habits.Remove(habit);
             Save();
         }
@@ -26,9 +31,9 @@ namespace WAD.Repositories
             _dbContext.SaveChanges();
         }
 
-        public Habit GetHabitById(int Id)
+        public Habit GetHabitById(int  Id)
         {
-            var habit = _dbContext.Habits.Find(Id);
+            var habit = FindHabitById(Id);
             return habit;
         }
 

@@ -17,6 +17,15 @@ namespace WAD.Controllers
             _progressRepository = progressRepository;
         }
 
+        private ActionResult HandleSuccessfulOperation(object result)
+        {
+            using (var scope = new TransactionScope())
+            {
+                scope.Complete();
+                return Ok(result);
+            }
+        }
+
         // GET: api/<ProgressController>
         [HttpGet]
         public IActionResult Get()
@@ -35,38 +44,31 @@ namespace WAD.Controllers
 
         // POST api/<ProgressController>
         [HttpPost]
-        public IActionResult Post([FromBody] Progress progress)
+        public ActionResult Post([FromBody] Progress progress)
         {
-            using (var scope = new TransactionScope())
-            {
-                _progressRepository.InsertProgress(progress);
-                scope.Complete();
-                return CreatedAtAction(nameof(Get), new { id = progress.ID }, progress);
-            }
+            _progressRepository.InsertProgress(progress);
+            return HandleSuccessfulOperation(progress);
         }
 
         // PUT api/<ProgressController>/5
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Progress progress)
+        public ActionResult Put(int id, [FromBody] Progress progress)
         {
-            if (progress != null)
+            var existingProgress = _progressRepository.GetProgressById(id);
+            if (existingProgress != null)
             {
-                using (var scope = new TransactionScope())
-                {
-                    _progressRepository.UpdateProgress(progress);
-                    scope.Complete();
-                    return new OkResult();
-                }
+                _progressRepository.UpdateProgress(progress);
+                return HandleSuccessfulOperation(null);
             }
-            return new NoContentResult();
+            return NotFound();
         }
 
         // DELETE api/<ProgressController>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public ActionResult Delete(int id)
         {
             _progressRepository.DeleteProgress(id);
-            return new OkResult();
+            return HandleSuccessfulOperation(null);
         }
     }
 }

@@ -2,6 +2,7 @@
 using WAD.Repositories;
 using WAD.Models;
 using System.Transactions;
+using Microsoft.AspNetCore.Http;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,6 +16,15 @@ namespace WAD.Controllers
         public HabitController(IHabitRepository habitRepository)
         {
             _habitRepository = habitRepository;
+        }
+
+        private ActionResult HandleSuccessfulOperation(object result)
+        {
+            using (var scope = new TransactionScope())
+            {
+                scope.Complete();
+                return Ok(result);
+            }
         }
 
         // GET: api/<HabitController>
@@ -35,38 +45,31 @@ namespace WAD.Controllers
 
         // POST api/<HabitController>
         [HttpPost]
-        public IActionResult Post([FromBody] Habit habit)
+        public ActionResult Post([FromBody] Habit habit)
         {
-            using (var scope = new TransactionScope())
-            {
-                _habitRepository.InsertHabit(habit);
-                scope.Complete();
-                return CreatedAtAction(nameof(Get), new { id = habit.ID }, habit);
-            }
+            _habitRepository.InsertHabit(habit);
+            return HandleSuccessfulOperation(habit);
         }
 
         // PUT api/<HabitController>/5
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Habit habit)
+        public ActionResult Put(int id, [FromBody] Habit habit)
         {
-            if (habit != null)
+            var existingHabits = _habitRepository.GetHabitById(id);
+            if (existingHabits != null)
             {
-                using (var scope = new TransactionScope())
-                {
-                    _habitRepository.UpdateHabit(habit);
-                    scope.Complete();
-                    return new OkResult();
-                }
+                _habitRepository.UpdateHabit(habit);
+                return HandleSuccessfulOperation(null);
             }
-            return new NoContentResult();
+            return NotFound();
         }
 
         // DELETE api/<HabitController>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public ActionResult Delete(int id)
         {
             _habitRepository.DeleteHabit(id);
-            return new OkResult();
+            return HandleSuccessfulOperation(null);
         }
     }
 }
