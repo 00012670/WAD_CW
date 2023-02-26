@@ -14,14 +14,9 @@ namespace WAD.Repositories
             _dbContext = dbContext;
         }
 
-        private Progress FindProgressById(int progressId)
-        {
-            return _dbContext.Progresses.Find(progressId);
-        }
-
         public void DeleteProgress(int progressId)
         {
-            var progress = FindProgressById(progressId);
+            var progress = _dbContext.Progresses.Find(progressId);
             _dbContext.Progresses.Remove(progress);
             Save();
         }
@@ -38,7 +33,7 @@ namespace WAD.Repositories
 
         public Progress GetProgressById(int Id)
         {
-            var progress = FindProgressById(Id);
+            var progress = _dbContext.Progresses.Find(Id);
             return progress;
         }
 

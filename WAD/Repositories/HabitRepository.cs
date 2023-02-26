@@ -26,9 +26,9 @@ namespace WAD.Repositories
             _dbContext.SaveChanges();
         }
 
-        public Habit GetHabitById(int habitId)
+        public Habit GetHabitById(int Id)
         {
-            var habit = FindHabitById(habitId);
+            var habit = _dbContext.Habits.Find(Id);
             return habit;
         }
 
