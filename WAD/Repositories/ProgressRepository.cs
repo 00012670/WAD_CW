@@ -50,7 +50,12 @@ namespace WAD.Repositories
 
         public void UpdateProgress(Progress progress)
         {
-            _dbContext.Entry(progress).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            var existingProgress = _dbContext.Progresses.Find(progress.ID);
+            existingProgress.Date = progress.Date;
+            existingProgress.HabitProgress = progress.HabitProgress;
+            existingProgress.IsCompleted = progress.IsCompleted;
+            existingProgress.Notes = progress.Notes;
+            Save();
         }
     }
 }
