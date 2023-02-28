@@ -35,7 +35,7 @@ namespace WAD.Controllers
         }
 
         // GET api/<ProgressController>/5
-        [HttpGet("{id}", Name = "GetC")]
+        [HttpGet("{id}", Name = "GetP")]
         public IActionResult Get(int id)
         {
             var progress = _progressRepository.GetProgressById(id);

@@ -17,9 +17,5 @@ namespace WAD.DAL
         public DbSet<Habit> Habits { get; set; }
         public DbSet<Progress> Progresses { get; set; }
 
-        public static implicit operator HabitContext(ProgressRepository v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

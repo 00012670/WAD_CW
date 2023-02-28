@@ -51,7 +51,11 @@ namespace WAD.Repositories
 
         public void UpdateHabit(Habit habit)
         {
-            _dbContext.Entry(habit).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            var existingHabit = _dbContext.Habits.Find(habit.ID);
+            existingHabit.Name = habit.Name;
+            existingHabit.Frequency = habit.Frequency;
+            existingHabit.Repeat = habit.Repeat;
+            existingHabit.StartDate = habit.StartDate;
             Save();
         }
     }

@@ -36,7 +36,7 @@ namespace WAD.Controllers
         }
 
         // GET api/<HabitController>/5
-        [HttpGet, Route("{id}", Name = "GetP")]
+        [HttpGet, Route("{id}", Name = "GetH")]
         public IActionResult Get(int id)
         {
             var habit = _habitRepository.GetHabitById(id);
