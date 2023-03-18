@@ -44,7 +44,6 @@ namespace WAD.Repositories
 
         public void InsertHabit(Habit habit)
         {
-            habit.HabitProgress = _dbContext.Progresses.Find(habit.HabitProgress.ID);
             _dbContext.Add(habit);
             Save();
         }

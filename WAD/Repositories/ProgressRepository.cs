@@ -44,6 +44,7 @@ namespace WAD.Repositories
 
         public void InsertProgress(Progress progress)
         {
+            progress.Habit = _dbContext.Habits.Find(progress.Habit.ID);
             _dbContext.Add(progress);
             Save();
         }
@@ -51,6 +52,7 @@ namespace WAD.Repositories
         public void UpdateProgress(Progress progress)
         {
             var existingProgress = _dbContext.Progresses.Find(progress.ID);
+            existingProgress.Name = progress.Name;
             existingProgress.Date = progress.Date;
             existingProgress.HabitProgress = progress.HabitProgress;
             existingProgress.IsCompleted = progress.IsCompleted;
