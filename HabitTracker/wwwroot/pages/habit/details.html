@@ -1,0 +1,52 @@
+﻿<div class="container">
+    <br>
+    <h3>Habit Details</h3>
+    <hr />
+    <div class="row">
+        <div class="col-sm-2">
+            <strong>ID</strong>
+        </div>
+        <div class="col-sm-10">
+            {{ details.id }}
+        </div>
+        <div class="col-sm-2">
+            <strong>Name</strong>
+        </div>
+        <div class="col-sm-10">
+            {{ details.name }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <strong>Frequency</strong>
+        </div>
+        <div class="col-sm-10">
+            {{ details.frequency }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <strong>Repeat</strong>
+        </div>
+        <div class="col-sm-10">
+            {{ details.repeat | repeatType }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <strong>Start Date</strong>
+        </div>
+        <div class="col-sm-10">
+            {{ details.startDate }}
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="#!/edit/{{details.id}}">Edit</a> |
+            <a href="#!">Back to List</a>
+        </div>
+    </div>
+</div>

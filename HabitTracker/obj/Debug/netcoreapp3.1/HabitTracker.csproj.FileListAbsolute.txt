@@ -1,0 +1,86 @@
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.exe
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.deps.json
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.runtimeconfig.json
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.runtimeconfig.dev.json
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.dll
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.pdb
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.Views.dll
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.Views.pdb
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.csproj.AssemblyReference.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.AssemblyInfoInputs.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.AssemblyInfo.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.csproj.CoreCompileInputs.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorAssemblyInfo.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorAssemblyInfo.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\HabitTracker.StaticWebAssets.Manifest.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\HabitTracker.StaticWebAssets.Pack.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.HabitTracker.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.HabitTracker.props
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.HabitTracker.props
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.HabitTracker.props
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.TagHelpers.input.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.TagHelpers.output.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorCoreGenerate.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorTargetAssemblyInfo.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorTargetAssemblyInfo.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.Views.pdb
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.dll
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.pdb
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.genruntimeconfig.cache
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.csproj.CopyComplete
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Home\Habit.cshtml.g.cs
+C:\Users\Dinora\Desktop\BIS 5\Semester 2\WAD\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Home\Progress.cshtml.g.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.exe
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.deps.json
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.runtimeconfig.json
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.runtimeconfig.dev.json
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.dll
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.pdb
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.Views.dll
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\bin\Debug\netcoreapp3.1\HabitTracker.Views.pdb
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.csproj.AssemblyReference.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.AssemblyInfoInputs.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.AssemblyInfo.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.csproj.CoreCompileInputs.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorAssemblyInfo.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorAssemblyInfo.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\HabitTracker.StaticWebAssets.Manifest.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\HabitTracker.StaticWebAssets.Pack.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.HabitTracker.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.HabitTracker.props
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.HabitTracker.props
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.HabitTracker.props
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.TagHelpers.input.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.TagHelpers.output.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorCoreGenerate.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Home\Habit.cshtml.g.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Home\Progress.cshtml.g.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorTargetAssemblyInfo.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.RazorTargetAssemblyInfo.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.Views.pdb
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.dll
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.pdb
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.genruntimeconfig.cache
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\HabitTracker.csproj.CopyComplete
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Dinora\Desktop\HabitTracker\HabitTracker\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs

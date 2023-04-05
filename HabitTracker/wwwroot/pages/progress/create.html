@@ -1,0 +1,32 @@
+﻿<h3>Create Progress</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="name" class="control-label">Name</label>
+                <input ng-model="progress.name" class="form-control" id="name" name="name" placeholder="Enter name" required />
+            </div>
+            <div class="form-group">
+                <label for="habitProgress" class="control-label"></label>
+                <input ng-model="progress.habitProgress" class="form-control" id="habitProgress" name="habitProgress" placeholder="Enter habitProgress" required />
+            </div>
+            <div class="form-group">
+                <label for="repeat" class="control-label">Is Completed</label>
+                <input ng-model="progress.isCompleted" class="form-control" id="isCompleted" name="isCompleted" placeholder="Enter isCompleted" required />
+            </div>
+            <div class="form-group">
+                <label for="repeat" class="control-label">Note</label>
+                <input ng-model="progress.note" class="form-control" id="note" name="note" placeholder="Enter note" required />
+            </div>
+            <div class="form-group">
+                <label for="endDate" class="control-label">End Date</label>
+                <input ng-model="progress.endDate" class="form-control" type="text" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" ng-click="Save()">Create</button>
+                <a class="btn btn-default" href="/">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿<h2>Habits</h2>
+
+<div class="form-group">
+    <a href="#!/create">Create New</a>
+</div>
+
+<div class="row">
+    <div class="col-md-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Frequency</th>
+                    <th>Repeat</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="h in habits">
+                    <td>{{h.id}}</td>
+                    <td>{{h.name}}</td>
+                    <td>{{h.frequency}}</td>
+                    <td>{{h.repeat | repeatType}}</td>
+                    <td>{{h.startDate}}</td>
+                    <td><a href="#!/details/{{h.id}}">View</a> | <a href="#!/edit/{{h.id}}">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

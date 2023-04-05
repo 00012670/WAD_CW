@@ -1,0 +1,111 @@
+﻿<div ng-app="WAD">
+    <div ng-view></div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+<script type="text/javascript">
+    // Creating a Module to use within index page
+    var baseURL = 'https://localhost:47547/api/'
+    angular
+        .module('WAD', ['ngRoute'])
+        .config(function ($routeProvider) {
+            $routeProvider
+                .when('/',
+                    {
+                        templateUrl: 'pages/habit/index.html',
+                        controller: 'IndexController'
+                    })
+                .when('/create',
+                    {
+                        templateUrl: 'pages/habit/create.html',
+                        controller: 'CreateController'
+                    })
+                .when('/details/:habitId',
+                    {
+                        templateUrl: 'pages/habit/details.html',
+                        controller: 'DetailsController'
+                    })
+
+                .when('/edit/:habitId',
+                    {
+                        templateUrl: 'pages/habit/edit.html',
+                        controller: 'EditDeleteController'
+                    })
+                .otherwise({
+                    redirectTo: '/'
+                });
+
+        })
+        .controller('IndexController', ['$scope', '$http', function ($scope, $http) {
+            $scope.habits = [];
+            $http.get('http://localhost:47547/api/Habit/')
+                .then(function (res) {
+
+                    $scope.habits = res.data;
+                })
+        }])
+        .controller('CreateController', ['$scope', '$http', '$location', '$filter', function ($scope, $http, $location, $filter) {
+            $scope.habit = {
+                id: 0,
+                name: '',
+                frequency: '',
+                repeat: '',
+                startDate: $filter('date')(new Date(), "yyyy-MM-dd HH:mm:ss")
+            };
+            $scope.saveHabit = function () {
+                $scope.habit.startDate = $filter('date')($scope.startDate, "yyyy-MM-dd HH:mm:ss");
+                $http.post('http://localhost:47547/api/Habit/', $scope.habit)
+                    .then(function (response) {
+                        console.log(response);
+                    }, function (error) {
+                        console.log(error);
+                    });
+            }
+        }])
+        .controller('DetailsController', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
+            $scope.details = [];
+
+            $http.get('http://localhost:47547/api/Habit/' + $routeParams.habitId)
+                .then(function (res) {
+                    $scope.details = res.data;
+                    $scope.edit.repeat = $filter('repeatType')($scope.edit.repeat);
+                });
+
+        }])
+        .controller('EditDeleteController', ['$scope', '$http', '$location', '$routeParams', function ($scope, $http, $location, $routeParams) {
+           
+            $scope.repeatTypes = ['Daily', 'Weekly', 'Monthly'];
+            $scope.edit = [];
+
+            $http.get('http://localhost:47547/api/Habit/' + $routeParams.habitId)
+                .then(function (res) {
+                    $scope.edit = res.data;
+                });
+
+            $scope.Edit = function () {
+                $scope.edit.frequency = parseInt($scope.edit.frequency); 
+                $http.put('http://localhost:47547/api/Habit/' + $routeParams.habitId, $scope.edit)
+                    .then(function (res) {
+                        $location.path('/');
+                    });
+            };
+            $scope.Delete = function () {
+                $http.delete('http://localhost:47547/api/Habit/' + $routeParams.habitId, null)
+                    .then(function (res) {
+                        $location.path('/');
+                    });
+            };
+        }])
+        .filter('repeatType', function () {
+            return function (input) {
+                switch (input) {
+                    case 0:
+                        return 'Daily';
+                    case 1:
+                        return 'Weekly';
+                    case 2:
+                        return 'Monthly';
+                }
+            };
+        });
+</script>

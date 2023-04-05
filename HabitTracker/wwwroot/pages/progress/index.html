@@ -1,0 +1,32 @@
+﻿<h2>Progresses</h2>
+
+<div class="form-group">
+    <a href="#!/create">Create New</a>
+</div>
+
+<div class="row">
+    <div class="col-md-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>HabitProgress</th>
+                    <th>IsCompleted</th>
+                    <th>Note</th>
+                    <th>End Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in progresses">
+                    <td>{{p.id}}</td>
+                    <td>{{p.habitProgress}}</td>
+                    <td>{{p.isCompleted}}</td>
+                    <td>{{p.note}}</td>
+                    <td>{{p.etartDate}}</td>
+                    <td><a href="#!/details/{{p.id}}">View</a> | <a href="#!/edit/{{h.id}}">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
