@@ -36,54 +36,87 @@
                 });
 
         })
-        .controller('IndexController', ['$scope', '$http', function ($scope, $http) {
+        .controller('IndexController', ['$scope', '$http', '$filter', function ($scope, $http, $filter) {
             $scope.habits = [];
             $http.get('http://localhost:47547/api/Habit/')
                 .then(function (res) {
-
                     $scope.habits = res.data;
+
+                    for (var i = 0; i < $scope.habits.length; i++) {
+                        $scope.habits[i].startDate = $filter('date')($scope.habits[i].startDate, "mediumDate");
+                    }
                 })
+
         }])
         .controller('CreateController', ['$scope', '$http', '$location', '$filter', function ($scope, $http, $location, $filter) {
-            $scope.habit = {
-                id: 0,
+            $scope.repeatTypes = ['Daily', 'Weekly', 'Monthly'];
+            $scope.create =
+            {
                 name: '',
                 frequency: '',
                 repeat: '',
-                startDate: $filter('date')(new Date(), "yyyy-MM-dd HH:mm:ss")
+                startDate: ''
             };
-            $scope.saveHabit = function () {
-                $scope.habit.startDate = $filter('date')($scope.startDate, "yyyy-MM-dd HH:mm:ss");
-                $http.post('http://localhost:47547/api/Habit/', $scope.habit)
-                    .then(function (response) {
-                        console.log(response);
-                    }, function (error) {
-                        console.log(error);
+
+
+            $scope.Save = function () {
+                $scope.create.frequency = parseInt($scope.create.frequency);
+                // console.log($scope.create.repeat);
+                switch ($scope.create.repeat) {
+                    case 'Daily':
+                        $scope.create.repeat = 0;
+                        break;
+                    case 'Weekly':
+                        $scope.create.repeat = 1;
+                        break;
+                    case 'Monthly':
+                        $scope.create.repeat = 2;
+                        break;
+                }
+
+                $http.post('http://localhost:47547/api/Habit/', $scope.create)
+                    .then(function (res) {
+                        $location.path('/');
                     });
             }
         }])
-        .controller('DetailsController', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
+        .controller('DetailsController', ['$scope', '$http', '$routeParams', '$filter', function ($scope, $http, $routeParams, $filter) {
             $scope.details = [];
 
             $http.get('http://localhost:47547/api/Habit/' + $routeParams.habitId)
                 .then(function (res) {
                     $scope.details = res.data;
-                    $scope.edit.repeat = $filter('repeatType')($scope.edit.repeat);
+                    $scope.details.startDate = $filter('date')($scope.details.startDate, "mediumDate");
+
                 });
 
         }])
-        .controller('EditDeleteController', ['$scope', '$http', '$location', '$routeParams', function ($scope, $http, $location, $routeParams) {
-           
+        .controller('EditDeleteController', ['$scope', '$http', '$location', '$routeParams', '$filter', function ($scope, $http, $location, $routeParams) {
+
             $scope.repeatTypes = ['Daily', 'Weekly', 'Monthly'];
             $scope.edit = [];
 
             $http.get('http://localhost:47547/api/Habit/' + $routeParams.habitId)
                 .then(function (res) {
                     $scope.edit = res.data;
+                    $scope.edit.repeat = $scope.repeatTypes[$scope.edit.repeat];
+                    $scope.edit.startDate = new Date($scope.edit.startDate);
+
                 });
 
             $scope.Edit = function () {
-                $scope.edit.frequency = parseInt($scope.edit.frequency); 
+                $scope.edit.frequency = parseInt($scope.edit.frequency);
+                switch ($scope.edit.repeat) {
+                    case 'Daily':
+                        $scope.edit.repeat = 0;
+                        break;
+                    case 'Weekly':
+                        $scope.edit.repeat = 1;
+                        break;
+                    case 'Monthly':
+                        $scope.edit.repeat = 2;
+                        break;
+                }
                 $http.put('http://localhost:47547/api/Habit/' + $routeParams.habitId, $scope.edit)
                     .then(function (res) {
                         $location.path('/');

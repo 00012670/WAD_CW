@@ -38,7 +38,7 @@
         })
         .controller('IndexController', ['$scope', '$http', function ($scope, $http) {
             $scope.Progresss = [];
-            $http.get('http://localhost:47547/api/Progress/')
+            $http.get('http://localhost:47547/api/Progress/' + $routeParams.ProgressId)
                 .then(function (res) {
 
                     $scope.Progresses = res.data;
