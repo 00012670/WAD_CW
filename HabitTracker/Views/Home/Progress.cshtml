@@ -4,7 +4,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
 <script type="text/javascript">
-    // Creating a Module to use within index page
+
     var baseURL = 'https://localhost:47547/api/'
     angular
         .module('WAD', ['ngRoute'])
@@ -34,63 +34,107 @@
                 .otherwise({
                     redirectTo: '/'
                 });
-
         })
-        .controller('IndexController', ['$scope', '$http', function ($scope, $http) {
-            $scope.Progresss = [];
-            $http.get('http://localhost:47547/api/Progress/' + $routeParams.ProgressId)
-                .then(function (res) {
 
-                    $scope.Progresses = res.data;
+
+        .controller('IndexController', ['$scope', '$http', '$filter', function ($scope, $http, $filter) {
+            $scope.progresses = [];
+            $http.get('http://localhost:47547/api/Progress/')
+                .then(function (res) {
+                    $scope.progresses = res.data;
+
+                    for (var i = 0; i < $scope.progresses.length; i++) {
+                        $scope.progresses[i].endDate = $filter('date')($scope.progresses[i].endDate, "mediumDate");
+                    }
                 })
         }])
-        .controller('CreateController', ['$scope', '$http', '$location', '$filter', function ($scope, $http, $location, $filter) {
-            $scope.Progress = {
-                id: 0,
-                HabitProgress: '',
-                IsCompleted: '',
-                Note: '',
-                endDate: $filter('date')(new Date(), "yyyy-MM-dd HH:mm:ss")
-            };
-            $scope.saveProgress = function () {
-                $scope.Progress.startDate = $filter('date')($scope.startDate, "yyyy-MM-dd HH:mm:ss");
-                $http.post('http://localhost:47547/api/Progress/', $scope.Progress)
-                    .then(function (response) {
-                        console.log(response);
-                    }, function (error) {
-                        console.log(error);
-                    });
-            }
-        }])
-        .controller('DetailsController', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
-            $scope.details = [];
 
-            $http.get('http://localhost:47547/api/Progress/' + $routeParams.ProgressId)
+
+        .controller('CreateController', ['$scope', '$http', '$location', '$routeParams', '$filter', function ($scope, $http, $location, $routeParams, $filter) {
+            $scope.create = {
+                habitProgress: '',
+                isCompleted: false,
+                note: '',
+                endDate: ''
+            };
+            
+            $scope.names = []
+
+            $http.get('http://localhost:47547/api/Habit/')
                 .then(function (res) {
-                    $scope.details = res.data;
+                    $scope.habits = res.data;
+                    for (var i = 0; i < $scope.habits.length; i++) {
+                        $scope.names[i] = $scope.habits[i].name;
+                    }
                 });
 
+            $scope.Save = function () {
+
+                for (var i = 0; i < $scope.habits.length; i++) {
+                    if ($scope.habitName == $scope.habits[i].name) {
+                        $scope.habitId = $scope.habits[i].id;
+                    }
+                }
+                
+
+                $http.get('http://localhost:47547/api/Habit/' + $scope.habitId)
+                    .then(function (res) {
+                        $scope.create.habit = res.data;
+
+                        $http.post('http://localhost:47547/api/Progress/', $scope.create)
+                            .then(function (res) {
+                                console.log(res.data.habit);
+                                console.log(res.data.isCompleted);
+                                $location.path('/');
+                            });
+                        
+                    });
+            };
         }])
-        .controller('EditDeleteController', ['$scope', '$http', '$location', '$routeParams', function ($scope, $http, $location, $routeParams) {
+
+
+
+        .controller('DetailsController', ['$scope', '$http', '$routeParams', '$filter', function ($scope, $http, $routeParams, $filter) {
+            $scope.details = [];
+
+            $http.get('http://localhost:47547/api/Progress/' + $routeParams.progressId)
+                .then(function (res) {
+                    $scope.details = res.data;
+                    $scope.details.endDate = $filter('date')($scope.details.endDate, "mediumDate");
+
+                });
+        }])
+
+
+        .controller('EditDeleteController', ['$scope', '$http', '$location', '$routeParams', '$filter', function ($scope, $http, $location, $routeParams) {
             $scope.edit = [];
 
-            $http.get('http://localhost:47547/api/Progress/' + $routeParams.ProgressId)
+            $http.get('http://localhost:47547/api/Progress/' + $routeParams.progressId)
                 .then(function (res) {
                     $scope.edit = res.data;
+                    $scope.edit.habitProgress = parseInt($scope.edit.habitProgress);
+                    $scope.edit.endDate = new Date($scope.edit.endDate);
+
                 });
 
             $scope.Edit = function () {
-                $http.put('http://localhost:47547/api/Progress/' + $routeParams.ProgressId, $scope.edit)
+                $scope.edit.habitProgress = parseInt($scope.edit.habitProgress);
+                $http.put('http://localhost:47547/api/Progress/' + $routeParams.progressId, $scope.edit)
                     .then(function (res) {
                         $location.path('/');
                     });
             };
             $scope.Delete = function () {
-                $http.delete('http://localhost:47547/api/Progress/' + $routeParams.ProgressId, null)
+                $http.delete('http://localhost:47547/api/Progress/' + $routeParams.progressId, null)
                     .then(function (res) {
                         $location.path('/');
                     });
             };
-        }]);
+        }])
+        .filter('yesNo', function () {
+            return function (input) {
+                return input ? 'Yes' : 'No';
+            }
+        });
 </script>
 

@@ -18,23 +18,19 @@ namespace HabitTracker.Controllers
             _logger = logger;
         }
 
+        [Route("")]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-
+        [Route("Habit")]
         public IActionResult Habit()
         {
             return View();
         }
 
-
+        [Route("Progress")]
         public IActionResult Progress()
         {
             return View();

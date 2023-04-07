@@ -4,7 +4,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
 <script type="text/javascript">
-    // Creating a Module to use within index page
+
     var baseURL = 'https://localhost:47547/api/'
     angular
         .module('WAD', ['ngRoute'])
@@ -36,6 +36,8 @@
                 });
 
         })
+
+
         .controller('IndexController', ['$scope', '$http', '$filter', function ($scope, $http, $filter) {
             $scope.habits = [];
             $http.get('http://localhost:47547/api/Habit/')
@@ -48,8 +50,9 @@
                 })
 
         }])
+
+
         .controller('CreateController', ['$scope', '$http', '$location', '$filter', function ($scope, $http, $location, $filter) {
-            $scope.repeatTypes = ['Daily', 'Weekly', 'Monthly'];
             $scope.create =
             {
                 name: '',
@@ -57,11 +60,10 @@
                 repeat: '',
                 startDate: ''
             };
-
+            $scope.create.frequency = parseInt($scope.create.frequency);
+            $scope.repeatTypes = ['Daily', 'Weekly', 'Monthly'];
 
             $scope.Save = function () {
-                $scope.create.frequency = parseInt($scope.create.frequency);
-                // console.log($scope.create.repeat);
                 switch ($scope.create.repeat) {
                     case 'Daily':
                         $scope.create.repeat = 0;
@@ -80,6 +82,8 @@
                     });
             }
         }])
+
+
         .controller('DetailsController', ['$scope', '$http', '$routeParams', '$filter', function ($scope, $http, $routeParams, $filter) {
             $scope.details = [];
 
@@ -89,8 +93,9 @@
                     $scope.details.startDate = $filter('date')($scope.details.startDate, "mediumDate");
 
                 });
-
         }])
+
+
         .controller('EditDeleteController', ['$scope', '$http', '$location', '$routeParams', '$filter', function ($scope, $http, $location, $routeParams) {
 
             $scope.repeatTypes = ['Daily', 'Weekly', 'Monthly'];

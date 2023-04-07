@@ -5,15 +5,15 @@
         <form>
             <div class="form-group">
                 <label for="id" class="control-label">ID</label>
-                <input ng-model="edit.id" class="form-control" disabled />
+                <input ng-model="edit.id" class="form-control" disabled/>
             </div>
             <div class="form-group">
                 <label for="name" class="control-label">Name</label>
-                <input ng-model="edit.name" class="form-control" placeholder="Name" />
+                <input ng-model="edit.name" class="form-control" placeholder="Name" required />
             </div>
             <div class="form-group">
                 <label for="frequency" class="control-label">Frequency</label>
-                <input ng-model="edit.frequency" class="form-control" placeholder="Frequency" type="number"/>
+                <input ng-model="edit.frequency" class="form-control" placeholder="Frequency" type="number" />
             </div>
             <div class="form-group">
                 <label for="repeat" class="control-label">Repeat</label>
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="startDate" class="control-label">Start Date</label>
-                <input ng-model="edit.startDate" class="form-control" type="datetime-local"/>
+                <input ng-model="edit.startDate" class="form-control" type="datetime-local" required/>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save Edit" class="btn btn-block btn-primary" ng-click="Edit()" />

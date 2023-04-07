@@ -7,31 +7,39 @@
             <strong>Name</strong>
         </div>
         <div class="col-sm-10">
-            {{ details.name }}
+            {{ details.habit.name }}
         </div>
     </div>
     <div class="row">
         <div class="col-sm-2">
-            <strong>Frequency</strong>
+            <strong>Habit Progress</strong>
         </div>
         <div class="col-sm-10">
-            {{ details.frequency }}
+            {{ details.habitProgress }}
         </div>
     </div>
     <div class="row">
         <div class="col-sm-2">
-            <strong>Repeat</strong>
+            <strong>Is Completed</strong>
         </div>
         <div class="col-sm-10">
-            {{ details.repeat | repeatType }}
+            {{create.isCompleted | yesNo}}
         </div>
     </div>
     <div class="row">
         <div class="col-sm-2">
-            <strong>Start Date</strong>
+            <strong>Note</strong>
         </div>
         <div class="col-sm-10">
-            {{ details.startDate }}
+            {{ details.note }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <strong>End Date</strong>
+        </div>
+        <div class="col-sm-10">
+            {{ details.endDate }}
         </div>
     </div>
 

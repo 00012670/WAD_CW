@@ -9,7 +9,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Name</th>
                     <th>HabitProgress</th>
                     <th>IsCompleted</th>
                     <th>Note</th>
@@ -19,12 +19,12 @@
             </thead>
             <tbody>
                 <tr ng-repeat="p in progresses">
-                    <td>{{p.id}}</td>
-                    <td>{{p.habitProgress}}</td>
-                    <td>{{p.isCompleted}}</td>
-                    <td>{{p.note}}</td>
-                    <td>{{p.etartDate}}</td>
-                    <td><a href="#!/details/{{p.id}}">View</a> | <a href="#!/edit/{{h.id}}">Edit</a></td>
+                    <td>{{ p.habit.name }}</td>
+                    <td>{{ p.habitProgress }}</td>
+                    <td>{{ p.isCompleted | yesNo }}</td>
+                    <td>{{ p.note }}</td>
+                    <td>{{ p.endDate }}</td>
+                    <td><a href="#!/details/{{ p.id }}">View</a> | <a href="#!/edit/{{ p.id }}">Edit</a></td>
                 </tr>
             </tbody>
         </table>
