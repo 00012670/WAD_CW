@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l58FaHRaGXbU+KTyH2oIwYHLdeqAEJqe+G/MqOcdIEdH/NIt1sUOSZqvfHet0ImZrA5eKwPT/GBXB/y4SNBPqQ==",
+  "dgSpecHash": "26mGPOMwtr8sRUkgrJzZSj00TnghYVPvPno8VGBdGyqqGkXIvFZ7olUB6K7L6BsiAiQ+aN9USaE7A9C4OU60Ig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dinora\\Desktop\\BIS 5\\Semester 2\\WAD\\WAD\\WAD\\WAD.csproj",
+  "projectFilePath": "C:\\Users\\Dinora\\Desktop\\WAD\\WAD\\WAD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dinora\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Dinora\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

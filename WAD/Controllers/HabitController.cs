@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WAD.Repositories;
-using WAD.Models;
 using System.Transactions;
-using Microsoft.AspNetCore.Http;
+using WAD.Models;
+using WAD.Repositories;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WAD.Controllers
 {
@@ -36,7 +34,7 @@ namespace WAD.Controllers
         }
 
         // GET api/<HabitController>/5
-        [HttpGet, Route("{id}", Name = "GetH")]
+        [HttpGet, Route("{id}", Name = "GetHabitByID")]
         public IActionResult Get(int id)
         {
             var habit = _habitRepository.GetHabitById(id);

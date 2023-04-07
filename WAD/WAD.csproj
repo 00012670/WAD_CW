@@ -18,5 +18,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating" Version="3.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataBaseAccess\DataBaseAccess.csproj" />
+  </ItemGroup>
+
 
 </Project>

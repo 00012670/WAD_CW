@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dinora\\Desktop\\BIS 5\\Semester 2\\WAD\\WAD\\WAD\\WAD.csproj": {}
+    "C:\\Users\\Dinora\\Desktop\\WAD\\WAD\\WAD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dinora\\Desktop\\BIS 5\\Semester 2\\WAD\\WAD\\WAD\\WAD.csproj": {
+    "C:\\Users\\Dinora\\Desktop\\WAD\\DataBaseAccess\\DataBaseAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dinora\\Desktop\\BIS 5\\Semester 2\\WAD\\WAD\\WAD\\WAD.csproj",
-        "projectName": "WAD",
-        "projectPath": "C:\\Users\\Dinora\\Desktop\\BIS 5\\Semester 2\\WAD\\WAD\\WAD\\WAD.csproj",
+        "projectUniqueName": "C:\\Users\\Dinora\\Desktop\\WAD\\DataBaseAccess\\DataBaseAccess.csproj",
+        "projectName": "DataBaseAccess",
+        "projectPath": "C:\\Users\\Dinora\\Desktop\\WAD\\DataBaseAccess\\DataBaseAccess.csproj",
         "packagesPath": "C:\\Users\\Dinora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dinora\\Desktop\\BIS 5\\Semester 2\\WAD\\WAD\\WAD\\obj\\",
+        "outputPath": "C:\\Users\\Dinora\\Desktop\\WAD\\DataBaseAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dinora\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,6 +28,71 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Dinora\\Desktop\\WAD\\WAD\\WAD.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Dinora\\Desktop\\WAD\\WAD\\WAD.csproj",
+        "projectName": "WAD",
+        "projectPath": "C:\\Users\\Dinora\\Desktop\\WAD\\WAD\\WAD.csproj",
+        "packagesPath": "C:\\Users\\Dinora\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dinora\\Desktop\\WAD\\WAD\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Dinora\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Dinora\\Desktop\\WAD\\DataBaseAccess\\DataBaseAccess.csproj": {
+                "projectPath": "C:\\Users\\Dinora\\Desktop\\WAD\\DataBaseAccess\\DataBaseAccess.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -84,7 +149,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,7 +3,6 @@ using System.Transactions;
 using WAD.Models;
 using WAD.Repositories;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WAD.Controllers
 {
@@ -30,7 +29,7 @@ namespace WAD.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var progress = _progressRepository.GetProgress();
+            var progress = _progressRepository.GetProgresses();
             return new OkObjectResult(progress);
         }
 
@@ -46,6 +45,7 @@ namespace WAD.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] Progress progress)
         {
+            
             _progressRepository.InsertProgress(progress);
             return HandleSuccessfulOperation(progress);
         }
